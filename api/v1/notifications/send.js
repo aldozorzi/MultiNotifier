@@ -1,7 +1,7 @@
-import { verifyApiKey } from "../../lib/auth.js";
-import { validatePayload } from "../../lib/validate.js";
-import { getHandler } from "../../lib/providers/index.js";
-import { HTTP } from "../../lib/constants.js";
+import { verifyApiKey } from "../../../lib/auth.js";
+import { validatePayload } from "../../../lib/validate.js";
+import { getHandler } from "../../../lib/providers/index.js";
+import { HTTP } from "../../../lib/constants.js";
 
 function jsonResponse(status, body) {
   return new Response(JSON.stringify(body), {

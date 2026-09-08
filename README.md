@@ -23,23 +23,23 @@ Client (OpenCode, extension)  --API Key-->  Router Service  --routes-->  Telegra
 ## Deployment
 
 1. Install the Vercel CLI and link the project:
-
+   
    ```bash
    npm i -g vercel
    vercel
    ```
 
 2. Configure environment variables in the Vercel dashboard (see `.env.example`):
-
-   | Variable             | Required | Description                                    |
-   | -------------------- | -------- | ---------------------------------------------- |
-   | `API_SECRET_KEY`     | Yes      | Shared secret used to authenticate clients     |
+   
+   | Variable             | Required     | Description                                |
+   | -------------------- | ------------ | ------------------------------------------ |
+   | `API_SECRET_KEY`     | Yes          | Shared secret used to authenticate clients |
    | `TELEGRAM_BOT_TOKEN` | For Telegram | Telegram bot token                         |
    | `TELEGRAM_CHAT_ID`   | For Telegram | Target chat/group id                       |
    | `WEBHOOK_URL`        | For Webhook  | Downstream webhook URL                     |
 
 3. Deploy:
-
+   
    ```bash
    vercel --prod
    ```
@@ -50,11 +50,11 @@ Client (OpenCode, extension)  --API Key-->  Router Service  --routes-->  Telegra
 
 Request headers:
 
-| Header          | Type   | Description                       |
-| --------------- | ------ | --------------------------------- |
-| `Authorization` | String | `Bearer <API_KEY>`                |
-| `x-api-key`     | String | Alternative: `API_KEY`            |
-| `Content-Type`  | String | `application/json`                |
+| Header          | Type   | Description            |
+| --------------- | ------ | ---------------------- |
+| `Authorization` | String | `Bearer <API_KEY>`     |
+| `x-api-key`     | String | Alternative: `API_KEY` |
+| `Content-Type`  | String | `application/json`     |
 
 Request body:
 
@@ -76,12 +76,12 @@ Request body:
 
 Response codes:
 
-| Status | Reason           | Description                                                       |
-| ------ | ---------------- | ----------------------------------------------------------------- |
-| `202`  | Accepted         | Validated and dispatched                                          |
-| `401`  | Unauthorized     | Missing or invalid API key                                        |
-| `422`  | Unprocessable    | Invalid body or unsupported channel                               |
-| `502`  | Bad Gateway      | Downstream provider rejected the request or server misconfigured  |
+| Status | Reason        | Description                                                      |
+| ------ | ------------- | ---------------------------------------------------------------- |
+| `202`  | Accepted      | Validated and dispatched                                         |
+| `401`  | Unauthorized  | Missing or invalid API key                                       |
+| `422`  | Unprocessable | Invalid body or unsupported channel                              |
+| `502`  | Bad Gateway   | Downstream provider rejected the request or server misconfigured |
 
 ## Authenticating Clients
 
@@ -105,6 +105,10 @@ The server accepts the request only if the presented key exactly matches
 
 Ready-to-run JavaScript and Bash integrations live in the [`examples`](./examples)
 folder. See [`examples/README.md`](./examples/README.md) for usage.
+
+## Extension
+
+To extend multinotifier and to add a new notification channel, simply ask your agent ;)
 
 ## Local Development
 

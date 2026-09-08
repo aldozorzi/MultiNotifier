@@ -1,0 +1,15 @@
+{
+  "name": "notification-router-service",
+  "version": "1.0.0",
+  "description": "Centralized gateway for delivering notification messages from clients to multiple downstream providers.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

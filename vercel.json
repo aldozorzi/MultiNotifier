@@ -1,0 +1,8 @@
+{
+  "functions": {
+    "api/v1/notifications/send.js": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  }
+}

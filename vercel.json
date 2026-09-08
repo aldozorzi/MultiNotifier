@@ -4,5 +4,11 @@
       "memory": 1024,
       "maxDuration": 10
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/v1/notifications/send",
+      "destination": "/api/v1/notifications/send"
+    }
+  ]
 }
